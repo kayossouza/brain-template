@@ -1,0 +1,53 @@
+# Ajustes pessoais - CLAUDE.local.md
+
+Copie este arquivo para `CLAUDE.local.md` para guardar personalizações que não vão para o Git.
+
+## Minha missão
+
+[Sua missão pessoal - o que te move]
+
+## Jeito de trabalhar
+
+- **Comunicação:** [Direta / Colaborativa / Detalhada]
+- **Feedback:** [Gentil / Direto / Desafiador]
+- **Planejamento:** [Planos detalhados / Flexível / Mínimo]
+
+## Agenda e energia
+
+- **Fuso horário:** America/Sao_Paulo
+- **Melhor horário de foco:** [Manhã / Tarde / Noite]
+- **Horário de trabalho:** [ex.: 9h - 18h]
+- **Dia da revisão:** [Domingo / Segunda-feira]
+
+## Momento de vida
+
+[Qualquer contexto pessoal que afete sua produtividade - opcional]
+
+## Metas privadas
+
+[Metas que você não quer no CLAUDE.md compartilhado]
+
+## Preferências pessoais
+
+### Notas diárias
+- Incluir previsão do tempo: [Sim / Não]
+- Incluir frase do dia: [Sim / Não]
+- Tamanho do bloco de tempo: [30 min / 1 hora / 2 horas]
+
+### Intensidade do coaching
+- Nível de desafio: [Gentil / Moderado / Intenso]
+- Check-ins de cobrança: [Diários / Semanais]
+
+## Tags próprias
+
+Tags pessoais que não estão no sistema padrão:
+- #[sua-tag-1]
+- #[sua-tag-2]
+
+## Notas para o Claude
+
+[Instruções específicas sobre como o Claude deve trabalhar com você]
+
+---
+
+*Este arquivo está no .gitignore e não vai para o Git*

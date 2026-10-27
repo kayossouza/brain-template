@@ -1,0 +1,43 @@
+filters:
+  and:
+    - file.inFolder("Projects")
+    - file.ext == "md"
+
+formulas:
+  days_since_edit: '(now() - file.mtime).days'
+  linked_from: 'file.backlinks.length'
+
+properties:
+  file.name:
+    displayName: "Projeto"
+  file.folder:
+    displayName: "Pasta"
+  formula.days_since_edit:
+    displayName: "Dias sem edição"
+  formula.linked_from:
+    displayName: "Citado em (notas)"
+  tags:
+    displayName: "Tags"
+
+views:
+  - type: table
+    name: "Todos"
+    order:
+      - file.name
+      - file.folder
+      - formula.linked_from
+      - formula.days_since_edit
+      - tags
+    sort:
+      - property: formula.days_since_edit
+        direction: ASC
+  - type: table
+    name: "Parados há mais de 30 dias"
+    filters: 'formula.days_since_edit > 30'
+    order:
+      - file.name
+      - file.folder
+      - formula.days_since_edit
+    sort:
+      - property: formula.days_since_edit
+        direction: DESC

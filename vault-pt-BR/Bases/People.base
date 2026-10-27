@@ -1,0 +1,44 @@
+filters:
+  and:
+    - file.inFolder("People")
+    - file.ext == "md"
+
+formulas:
+  days_since_contact: 'if(last_contact, (today() - date(last_contact)).days, "")'
+  linked_from: 'file.backlinks.length'
+
+properties:
+  file.name:
+    displayName: "Pessoa"
+  relation:
+    displayName: "Relação"
+  last_contact:
+    displayName: "Último contato"
+  formula.days_since_contact:
+    displayName: "Dias sem contato"
+  formula.linked_from:
+    displayName: "Citada em (notas)"
+
+views:
+  - type: table
+    name: "Mais citadas"
+    order:
+      - file.name
+      - relation
+      - formula.linked_from
+      - last_contact
+      - formula.days_since_contact
+    sort:
+      - property: formula.linked_from
+        direction: DESC
+  - type: table
+    name: "Sem contato há mais de 90 dias"
+    filters: 'formula.days_since_contact > 90'
+    order:
+      - file.name
+      - relation
+      - last_contact
+      - formula.days_since_contact
+    sort:
+      - property: last_contact
+        direction: ASC

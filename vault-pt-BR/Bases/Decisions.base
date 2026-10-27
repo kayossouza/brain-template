@@ -1,0 +1,29 @@
+filters:
+  and:
+    - file.inFolder("Decisions")
+    - file.hasTag("decision")
+
+formulas:
+  days_until_review: 'if(review_on, (date(review_on) - today()).days, "")'
+
+properties:
+  file.name:
+    displayName: "Decisão"
+  status:
+    displayName: "Status"
+  review_on:
+    displayName: "Revisar em"
+  formula.days_until_review:
+    displayName: "Dias até revisar"
+
+views:
+  - type: table
+    name: "Por data de revisão"
+    order:
+      - file.name
+      - status
+      - review_on
+      - formula.days_until_review
+    sort:
+      - property: review_on
+        direction: ASC

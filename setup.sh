@@ -101,7 +101,7 @@ FRESH=0
 # 1. Copy the vault, never overwriting an existing file.
 LIST=$(mktemp "${TMPDIR:-/tmp}/brain-setup.XXXXXX")
 trap 'rm -f "$LIST"' EXIT
-(cd "$SRC" && find . -type f ! -name FIRST_RUN ! -name .DS_Store | sed 's|^\./||' | sort) > "$LIST"
+(cd "$SRC" && find . -type f ! -name FIRST_RUN ! -name .DS_Store ! -path '*/__pycache__/*' | sed 's|^\./||' | sort) > "$LIST"
 copied=0
 kept=0
 while IFS= read -r rel; do

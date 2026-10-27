@@ -9,7 +9,7 @@ fail() { echo "FAIL: $*" >&2; exit 1; }
 
 sh -n "$ROOT/setup.sh" || fail "setup.sh syntax"
 for f in "$ROOT"/vault/.claude/hooks/*.sh "$ROOT"/vault/.claude/scripts/*.sh; do bash -n "$f" || fail "syntax $f"; done
-python3 -m py_compile "$ROOT/vault/.claude/scripts/brain-lint.py" || fail "lint compile"
+python3 -c "import ast, sys; ast.parse(open(sys.argv[1]).read())" "$ROOT/vault/.claude/scripts/brain-lint.py" || fail "lint syntax"
 echo "ok   syntax"
 
 for v in vault vault-pt-BR; do

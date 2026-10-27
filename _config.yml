@@ -1,0 +1,3 @@
+title: brain-template
+description: A second brain in Obsidian, run by Claude Code.
+exclude: [vault, vault-pt-BR, global-skill, tests, setup.sh]

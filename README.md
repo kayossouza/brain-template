@@ -2,6 +2,8 @@
 
 A second brain operated by Claude Code: an Obsidian vault with agents, skills, hooks and rules that keep it organized, plus a global `/brain` command to capture into it from any Claude Code session.
 
+If this template helps you, [give it a ⭐](https://github.com/kayossouza/brain-template): it helps other people find it.
+
 You write and decide. Claude Code creates the daily note, runs the weekly review, triages the inbox, keeps links healthy and tells you what is overdue.
 
 [Leia em português](#português)

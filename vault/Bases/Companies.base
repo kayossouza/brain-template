@@ -1,0 +1,30 @@
+filters:
+  and:
+    - file.inFolder("Companies")
+    - file.ext == "md"
+
+formulas:
+  linked_from: 'file.backlinks.length'
+  links_to: 'file.links.length'
+
+properties:
+  file.name:
+    displayName: "Company"
+  formula.linked_from:
+    displayName: "Linked from (notes)"
+  formula.links_to:
+    displayName: "Links to (notes)"
+  tags:
+    displayName: "Tags"
+
+views:
+  - type: table
+    name: "Most linked"
+    order:
+      - file.name
+      - formula.linked_from
+      - formula.links_to
+      - tags
+    sort:
+      - property: formula.linked_from
+        direction: DESC

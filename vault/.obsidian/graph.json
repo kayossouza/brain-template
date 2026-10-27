@@ -1,0 +1,86 @@
+{
+  "collapse-filter": true,
+  "search": "-path:Templates -path:.claude -file:CLAUDE -file:AGENTS -file:ORIGIN",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "file:Home",
+      "color": {
+        "a": 1,
+        "rgb": 16103168
+      }
+    },
+    {
+      "query": "path:Goals OR path:\"Daily Notes\"",
+      "color": {
+        "a": 1,
+        "rgb": 16733744
+      }
+    },
+    {
+      "query": "path:People",
+      "color": {
+        "a": 1,
+        "rgb": 5020415
+      }
+    },
+    {
+      "query": "path:Companies",
+      "color": {
+        "a": 1,
+        "rgb": 16747325
+      }
+    },
+    {
+      "query": "path:Projects",
+      "color": {
+        "a": 1,
+        "rgb": 3584894
+      }
+    },
+    {
+      "query": "path:Areas",
+      "color": {
+        "a": 1,
+        "rgb": 10186239
+      }
+    },
+    {
+      "query": "path:Timeline",
+      "color": {
+        "a": 1,
+        "rgb": 9016228
+      }
+    },
+    {
+      "query": "path:Places",
+      "color": {
+        "a": 1,
+        "rgb": 47321
+      }
+    },
+    {
+      "query": "path:Tools",
+      "color": {
+        "a": 1,
+        "rgb": 15168699
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -3,
+  "nodeSizeMultiplier": 0.8,
+  "lineSizeMultiplier": 0.3,
+  "collapse-forces": false,
+  "centerStrength": 0.8,
+  "repelStrength": 8,
+  "linkStrength": 1,
+  "linkDistance": 60,
+  "scale": 0.5,
+  "close": false
+}

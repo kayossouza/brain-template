@@ -1,0 +1,32 @@
+filters:
+  and:
+    - file.inFolder("Finances")
+    - file.hasTag("recurring")
+
+formulas:
+  days_until_due: 'if(next_due, (date(next_due) - today()).days, "")'
+
+properties:
+  file.name:
+    displayName: "Obligation"
+  cadence:
+    displayName: "Cadence"
+  next_due:
+    displayName: "Next due"
+  amount:
+    displayName: "Amount"
+  formula.days_until_due:
+    displayName: "Days until due"
+
+views:
+  - type: table
+    name: "Next due"
+    order:
+      - file.name
+      - cadence
+      - next_due
+      - formula.days_until_due
+      - amount
+    sort:
+      - property: next_due
+        direction: ASC
